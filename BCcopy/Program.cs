@@ -10,13 +10,15 @@ namespace BCcopy
     {
         static void Main(string[] args)
         {
-            if (args.Length == 0)
+            int number = -1;
+            while (number < 0)
             {
-                Console.WriteLine("No number provided!");
-                return;
+                Console.WriteLine("Please give me a number >= 0");
+                number = int.Parse(Console.ReadLine());
             }
-            int number = 0;
-            number = int.Parse(args[0]);
+
+
+
             Console.WriteLine("The number you gave is " + number);
 
             string result = Convert(number);
